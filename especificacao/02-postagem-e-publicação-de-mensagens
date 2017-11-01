@@ -1,0 +1,36 @@
+Postagem e publicação de mensagens
+
+Um usuário cadastrado no sistema pode postar mensagens. As mensagens postadas por um usuário devem ser publicadas na ordem
+inversa da postagem. (nota: rodar com versão do banco de dados em memória)
+
+> criar-mural bloco2
+ok
+> criar-mural bloco3
+ok
+> listar-murais
+bloco2
+bloco3
+> usar-mural bloco2
+ok
+> criar-usuario joao
+ok
+> criar-usuario jose
+> postar-anuncio joao "Vende-se Livro de Algebra"
+ok
+> postar-aviso joao "Amanhã não haverá aula de Calculo"
+ok
+> postar-evento joao  "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
+ok
+> postar-anuncio joao    
+mensagem-invalida
+> postar-anuncio maria "Meus amigos me chamam de Mari"
+usuario-nao-encontrado
+> postar-anuncio jose "Chuva de meteoros amanhã"
+ok
+> listar-posts bloco2
+id4 anuncio jose "Chuva de meteoros amanhã"
+id3 evento joao  "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
+id2 aviso joao "Amanhã não haverá aula de Calculo"
+id1 anuncio joao "Vende-se Livro de Algebra"
+> listar-posts bloco4
+mural-nao-encontrado

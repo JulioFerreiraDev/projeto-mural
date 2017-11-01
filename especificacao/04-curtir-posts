@@ -1,0 +1,37 @@
+Curtidas (demonstrar interesse)
+
+Qualquer usuário do sistema pode curtir um anuncio para demonstrar interesse
+
+> criar-usuario joao
+ok
+> criar-usuario maria
+ok
+> criar-usuario jose
+ok
+> criar-mural bloco2
+ok
+> usar-mural bloco2
+ok
+> postar-anuncio joao "Vende-se Livro de Algebra"
+ok
+> listar-posts bloco2
+id1 anuncio joao "Vende-se Livro de Algebra"
+> curtir-post maria 1
+ok
+> listar-curtidas 1
+maria
+> curtir-post jose 1
+ok
+> listar-curtidas 1
+jose
+maria
+> descurtir-post maria 1
+ok
+> listar-curtidas 1
+jose
+> curtir-post jose 2
+post-nao-encontrado
+> postar-aviso joao "Amanhã não haverá aula de Calculo"
+ok
+> listar-curtidas 2
+nada-a-mostrar

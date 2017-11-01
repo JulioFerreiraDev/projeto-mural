@@ -1,0 +1,42 @@
+Confirmacao de presenca em eventos
+
+Qualquer usuário do sistema pode confirmar presença em um evento e desconfirmar.
+
+> criar-usuario joao
+ok
+> criar-usuario maria
+ok
+> criar-usuario jose
+ok
+> criar-mural bloco2
+ok
+> usar-mural bloco2
+ok
+> postar-evento joao  "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
+ok
+> listar-posts bloco2
+id1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
+> confirmar-presenca maria 1
+ok
+> listar-participantes-evento 1
+maria
+> listar-eventos-confirmados maria
+id1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
+> postar-evento joao "Bailão dos Jeca" 09/11/2017 22:00
+> listar-posts bloco2
+id2 evento joao "Bailão dos Jeca" 09/11/2017 22:00
+id1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
+> confirmar-presenca maria 2
+ok
+> confirmar-presenca joao 2
+ok
+> listar-participantes-evento 2
+joao
+maria
+> listar-eventos-conformados maria
+id1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
+id2 evento joao "Bailão dos Jeca" 09/11/2017 22:00
+> desconfirmar-presenca maria 2
+ok
+> listar-eventos-conformados maria
+id1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00

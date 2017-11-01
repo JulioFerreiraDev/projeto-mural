@@ -1,0 +1,41 @@
+Criação de relacionamentos
+
+Qualquer usuário do sistema pode salvar um anuncio para ver depois.
+
+> criar-usuario joao
+ok
+> criar-usuario maria
+ok
+> criar-mural bloco2
+ok
+> usar-mural bloco2
+ok
+> postar-anuncio joao "Vende-se Livro de Algebra"
+ok
+> listar-posts bloco2
+id1 anuncio joao "Vende-se Livro de Algebra"
+> salvar-post maria 1
+ok
+> listar-salvos maria
+id1 anuncio joao "Vende-se Livro de Algebra"
+> excluir-salvo maria 1
+ok
+> listar-salvos maria
+nada-a-mostrar
+> salvar-post maria 2
+post-nao-encontrado
+> excluir-salvo maria 2
+post-nao-encontrado
+
+> postar-aviso joao "Amanhã não haverá aula de Calculo"
+ok
+> listar-post bloco2
+id2 aviso joao "Amanhã não haverá aula de Calculo"
+id1 anuncio joao "Vende-se Livro de Algebra"
+> salvar-post maria 1
+ok
+> salvar-post maria 2
+ok
+> listar-salvos maria
+id2 aviso joao "Amanhã não haverá aula de Calculo"
+id1 anuncio joao "Vende-se Livro de Algebra"
