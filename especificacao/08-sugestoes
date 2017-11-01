@@ -1,0 +1,35 @@
+Sugestoes
+
+Qualquer usuário do sistema pode sugerir posts a outros
+Assinaturas dos comandos:
+
+> criar-usuario joao
+ok
+> criar-usuario maria
+ok
+> criar-usuario jose
+ok
+> criar-usuario carlos
+ok
+> criar-mural bloco2
+ok
+> usar-mural bloco2
+ok
+> postar-anuncio joao "Vende-se Livro de Algebra"
+ok
+> listar-posts bloco2
+id1 anuncio joao "Vende-se Livro de Algebra"
+> sugerir 1 maria jose
+ok
+> listar-sugestoes jose
+maria: id1 anuncio joao "Vende-se Livro de Algebra"
+> listar-sugeridas maria
+jose: id1 anuncio joao "Vende-se Livro de Algebra"
+> listar-sugestoes-post 1
+maria jose
+> sugerir 1 jose carlos
+ok
+> listar-sugestoes-post 1
+maria jose
+jose carlos
+

@@ -1,0 +1,35 @@
+Lembretes
+
+Qualquer usuário do sistema pode criar lembretes para posts.
+Assinaturas dos comandos:
+criar-lembrete <user_name> <post_id> <data> <hora>
+listar-lembretes <user_name>
+remover-lembrete <user_name> <id_lembrete>
+
+Testes:
+
+> criar-usuario joao
+ok
+> criar-usuario maria
+ok
+> criar-mural bloco2
+ok
+> usar-mural bloco2
+ok
+> postar-anuncio joao "Vende-se Livro de Algebra"
+ok
+> listar-posts bloco2
+id_1 anuncio joao "Vende-se Livro de Algebra"
+> criar-lembrete maria 1 10/11/2017 14:00
+ok
+> criar-lembrete maria 1 11/11/2017 15:00
+ok
+> listar-lembretes maria
+id_1 10/11/2017 14:00 id_1 anuncio joao "Vende-se Livro de Algebra"
+id_2 11/11/2017 15:00 id_1 anuncio joao "Vende-se Livro de Algebra"
+> remover-lembrete maria 1
+ok
+> listar-lembretes maria
+id_2 11/11/2017 15:00 id_1 anuncio joao "Vende-se Livro de Algebra"
+
+

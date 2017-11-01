@@ -1,6 +1,12 @@
 Curtidas (demonstrar interesse)
 
-Qualquer usuário do sistema pode curtir um anuncio para demonstrar interesse
+Qualquer usuário do sistema pode curtir um anuncio para demonstrar interesse.
+Assinaturas dos comandos:
+curtir-post <user_name> <id_post>
+listar-curtidas <id_post>
+descurtir-post <user_name> <id_post>
+
+Testes:
 
 > criar-usuario joao
 ok
@@ -15,7 +21,7 @@ ok
 > postar-anuncio joao "Vende-se Livro de Algebra"
 ok
 > listar-posts bloco2
-id1 anuncio joao "Vende-se Livro de Algebra"
+id_1 anuncio joao "Vende-se Livro de Algebra"
 > curtir-post maria 1
 ok
 > listar-curtidas 1

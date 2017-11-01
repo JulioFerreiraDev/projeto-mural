@@ -1,10 +1,9 @@
 --- Adaptado de Marco Aurélio L. Barbosa ---
 
-Esta pasta contém a especificação executável de um sistema de rede social (mural online) e o
-esqueleto de uma implementação em java.
+Esta pasta contém a especificação executável de um sistema de rede social (mural online) e o esqueleto de uma implementação em java.
 
 Estes arquivos fazem parte da descrição do trabalho. A descrição
-completa do trabalho encontra-se disponível na página da disciplina.
+completa do trabalho encontra-se disponível no moodle.
 
 == Arquivos ==
 
@@ -13,7 +12,7 @@ especificao
 testador
     programa que lê os arquivos de especificação e executa a especificação no servidor
 exemplo-java
-    pasta com um projeto do netbeans 7 com um esqueleto do servidor
+    pasta com um projeto do netbeans com um esqueleto do servidor
     você pode usar este código como base do seu trabalho
 criar-zip
     script para criar um arquivo zipado para ser enviado para o professor

@@ -1,8 +1,6 @@
 Criação de usuários
 
-Novos usuários podem ser criados no sistema. Um nome de usuário deve ser
-composto apenas de letras e deve ter no mínimo 3 e no máximo 20 letras. Não
-deve ser permitido a criação de usuários com o mesmo nome.
+Novos usuários podem ser criados no sistema. Um nome de usuário deve ser composto apenas de letras e deve ter no mínimo 3 e no máximo 20 letras. Não deve ser permitido a criação de usuários com o mesmo nome.
 
 > criar-usuario joao
 ok

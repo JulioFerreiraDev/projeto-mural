@@ -1,6 +1,12 @@
-Criação de relacionamentos
+Salvar posts
 
-Qualquer usuário do sistema pode salvar um anuncio para ver depois.
+Qualquer usuário do sistema pode salvar um post para ver depois.
+Assinaturas dos comandos:
+salvar-post <user_name> <id_post>
+listar-salvos <user_name>
+excluir-salvo <user_name> <id_post>
+
+Testes:
 
 > criar-usuario joao
 ok
@@ -13,11 +19,11 @@ ok
 > postar-anuncio joao "Vende-se Livro de Algebra"
 ok
 > listar-posts bloco2
-id1 anuncio joao "Vende-se Livro de Algebra"
+id_1 anuncio joao "Vende-se Livro de Algebra"
 > salvar-post maria 1
 ok
 > listar-salvos maria
-id1 anuncio joao "Vende-se Livro de Algebra"
+id_1 anuncio joao "Vende-se Livro de Algebra"
 > excluir-salvo maria 1
 ok
 > listar-salvos maria
@@ -26,16 +32,15 @@ nada-a-mostrar
 post-nao-encontrado
 > excluir-salvo maria 2
 post-nao-encontrado
-
 > postar-aviso joao "Amanhã não haverá aula de Calculo"
 ok
 > listar-post bloco2
-id2 aviso joao "Amanhã não haverá aula de Calculo"
-id1 anuncio joao "Vende-se Livro de Algebra"
+id_2 aviso joao "Amanhã não haverá aula de Calculo"
+id_1 anuncio joao "Vende-se Livro de Algebra"
 > salvar-post maria 1
 ok
 > salvar-post maria 2
 ok
 > listar-salvos maria
-id2 aviso joao "Amanhã não haverá aula de Calculo"
-id1 anuncio joao "Vende-se Livro de Algebra"
+id_2 aviso joao "Amanhã não haverá aula de Calculo"
+id_1 anuncio joao "Vende-se Livro de Algebra"

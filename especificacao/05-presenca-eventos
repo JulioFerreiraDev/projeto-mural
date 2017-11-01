@@ -1,6 +1,13 @@
 Confirmacao de presenca em eventos
 
 Qualquer usuário do sistema pode confirmar presença em um evento e desconfirmar.
+Assinaturas dos comandos:
+confirmar-presenca <user_name> <id_post>
+desconfirmar-presenca <user_name> <id_post>
+listar-participantes-evento <id_post>
+listar-eventos-confirmados <user_name>
+
+Testes:
 
 > criar-usuario joao
 ok
@@ -12,20 +19,26 @@ ok
 ok
 > usar-mural bloco2
 ok
-> postar-evento joao  "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
+> postar-evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I - UFPR"
+ok
+> postar-anuncio joao "Vendo livro de álgebra"
 ok
 > listar-posts bloco2
-id1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
+id_2 anuncio joao "Vendo livro de álgebra"
+id_1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I - UFPR"
 > confirmar-presenca maria 1
 ok
+> confirmar-presenca maria 2
+nao-eh-um-evento
 > listar-participantes-evento 1
 maria
 > listar-eventos-confirmados maria
-id1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
-> postar-evento joao "Bailão dos Jeca" 09/11/2017 22:00
+id_1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I - UFPR"
+> postar-evento joao "Bailão dos Jeca" 09/11/2017 22:00 "Green Club"
+ok
 > listar-posts bloco2
-id2 evento joao "Bailão dos Jeca" 09/11/2017 22:00
-id1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
+id_2 evento joao "Bailão dos Jeca" 09/11/2017 22:00 "Green Club"
+id_1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I - UFPR"
 > confirmar-presenca maria 2
 ok
 > confirmar-presenca joao 2
@@ -33,10 +46,12 @@ ok
 > listar-participantes-evento 2
 joao
 maria
-> listar-eventos-conformados maria
-id1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
-id2 evento joao "Bailão dos Jeca" 09/11/2017 22:00
+> listar-eventos-confirmados maria
+id_1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I - UFPR"
+id_2 evento joao "Bailão dos Jeca" 09/11/2017 22:00 "Green Club"
 > desconfirmar-presenca maria 2
 ok
-> listar-eventos-conformados maria
-id1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
+> desconfirmar-presenca jose 2
+nao-tinha-confirmado
+> listar-eventos-confirmados maria
+id_1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I - UFPR"

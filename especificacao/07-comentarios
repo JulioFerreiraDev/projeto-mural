@@ -1,0 +1,39 @@
+Comentários
+
+Qualquer usuário do sistema pode comentar em posts.
+Assinaturas dos comandos:
+comentar <user_name> <id_post> <msg>
+listar-comentarios <id_post>
+excluir-comentario <user_name> <id_post> <id_comentario>
+
+Testes:
+
+> criar-usuario joao
+ok
+> criar-usuario maria
+ok
+> criar-usuario jose
+ok
+> criar-mural bloco2
+ok
+> usar-mural bloco2
+ok
+> postar-anuncio joao "Vende-se Livro de Algebra"
+ok
+> listar-posts bloco2
+id_1 anuncio joao "Vende-se Livro de Algebra"
+> comentar maria 1 "Quanto custa?"
+ok
+> comentar jose 1 "Entrega na UFPR?"
+ok
+> comentar joao 1 "50 reais. Entrego na UFPR"
+ok
+> listar-comentarios 1
+id_1 maria: "Quanto custa?"
+id_2 jose: "Entrega na UFPR?"
+id_3 joao: "50 reais. Entrego na UFPR"
+> excluir-comentario jose 1 2
+ok
+> listar-comentarios 1
+id_1 maria: "Quanto custa?"
+id_3 joao: "50 reais. Entrego na UFPR"

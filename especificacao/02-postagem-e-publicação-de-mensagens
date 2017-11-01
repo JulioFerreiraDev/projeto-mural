@@ -1,7 +1,18 @@
 Postagem e publicação de mensagens
 
 Um usuário cadastrado no sistema pode postar mensagens. As mensagens postadas por um usuário devem ser publicadas na ordem
-inversa da postagem. (nota: rodar com versão do banco de dados em memória)
+inversa da postagem. (nota: rodar com versão do banco de dados em memória).
+Assinaturas dos comandos: 
+criar-mural <nome_do_mural>
+listar-murais
+usar-mural <nome_do_mural>
+criar-usuario <user_name>
+postar-anuncio/aviso <user_name> <msg>
+postar-evento <user_name> <msg> <data> <hora> <local>
+listar-posts <nome_do_mural>
+excluir-post <user_name> <id_post>
+
+Testes:
 
 > criar-mural bloco2
 ok
@@ -15,11 +26,12 @@ ok
 > criar-usuario joao
 ok
 > criar-usuario jose
+ok
 > postar-anuncio joao "Vende-se Livro de Algebra"
 ok
 > postar-aviso joao "Amanhã não haverá aula de Calculo"
 ok
-> postar-evento joao  "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
+> postar-evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I"
 ok
 > postar-anuncio joao    
 mensagem-invalida
@@ -28,9 +40,20 @@ usuario-nao-encontrado
 > postar-anuncio jose "Chuva de meteoros amanhã"
 ok
 > listar-posts bloco2
-id4 anuncio jose "Chuva de meteoros amanhã"
-id3 evento joao  "Encontro dos Estudantes de Palotina" 08/11/2017 17:00
-id2 aviso joao "Amanhã não haverá aula de Calculo"
-id1 anuncio joao "Vende-se Livro de Algebra"
+id_4 anuncio jose "Chuva de meteoros amanhã"
+id_3 evento joao  "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I"
+id_2 aviso joao "Amanhã não haverá aula de Calculo"
+id_1 anuncio joao "Vende-se Livro de Algebra"
 > listar-posts bloco4
 mural-nao-encontrado
+> excluir-post joao 1
+ok
+> excluir-post jose 2
+nao-autorizado
+> excluir-post adm 2
+ok
+> excluir-post adm 5
+post-nao-encontrado
+> listar-posts bloco2
+id4 anuncio jose "Chuva de meteoros amanhã"
+id3 evento joao  "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I"
