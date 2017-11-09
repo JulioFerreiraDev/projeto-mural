@@ -11,6 +11,7 @@ package server;
 public enum Command {
     
     CREATE_USER("criar-usuario"),
+    CREATE_MURAL("criar-mural"),
     
     POST_MESSAGE("postar-mensagem"),
     LIST_USER_MESSAGES("listar-mensagens-usuario"),

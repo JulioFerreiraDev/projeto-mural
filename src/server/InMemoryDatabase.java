@@ -5,6 +5,7 @@
 package server;
 
 
+import core.Usuario;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -19,15 +20,15 @@ class InMemoryDatabase {
         
    //metodos de CRUD no banco de dados
     Map<String, Usuario> usuarios = new HashMap<String, Usuario>();
-    Map<Integer, Post> posts = new HashMap();
-    Map<String, Mural> murais = new HashMap();
+//    Map<Integer, Post> posts = new HashMap();
+//    Map<String, Mural> murais = new HashMap();
     
     public void inserirUsuario(Usuario usuario){
         usuarios.put(usuario.getUserName(), usuario);
     }
     
     public Usuario getUsuario(String userName){
-        usuarios.get(userName);
+        return usuarios.get(userName);
     }
     
     

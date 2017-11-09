@@ -11,7 +11,7 @@ package server;
 public enum OutputMessage {
     
     SUCCESS("ok"),
-    INVALID_COMMAND("Error: Command is invalid."), 
+    INVALID_COMMAND("comando-invalido"), 
     USER_ALREADY_EXISTS("usuario-ja-existe"),
     USER_DOESNT_EXIST("usuario-nao-encontrado"),
     FOLLOWER_DOESNT_EXIST("seguidor-nao-encontrado"),

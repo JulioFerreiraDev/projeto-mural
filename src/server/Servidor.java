@@ -1,5 +1,6 @@
 package server;
 
+import core.Usuario;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,11 +15,11 @@ import java.util.logging.Logger;
 public class Servidor {
     
     private static final int PORTA = 1234;
-    private PersistentDatabase database;
+    private InMemoryDatabase database;
     
     public void iniciar() throws IOException {
         ServerSocket socket = new ServerSocket(PORTA);
-        database = new PersistentDatabase();
+        database = new InMemoryDatabase();
 
         try {
             while (true) {
@@ -88,8 +89,26 @@ public class Servidor {
         String command_type = command.split(" ")[0];
         
         if (command_type.equals(Command.CREATE_USER.toString())){
-            //TODO
-        }    
+            System.out.println(command.split(" ").length);
+            if (command.split(" ").length != 2){
+                out_list.add(OutputMessage.INVALID_COMMAND.toString());
+                return out_list;
+            }
+            String userName = command.split(" ")[1];
+            if (userName.length() < 3) {
+                out_list.add(OutputMessage.INVALID_NAME.toString());     
+            } else if (database.getUsuario(userName) != null) {
+                out_list.add(OutputMessage.USER_ALREADY_EXISTS.toString());
+            } else {
+                Usuario user = new Usuario(userName);
+                database.inserirUsuario(user);
+                out_list.add(OutputMessage.SUCCESS.toString());
+            }
+            
+            
+        } else if (command_type.equals(Command.CREATE_MURAL.toString())){
+            // TODO
+        }
         //TODO...
         
         return out_list;

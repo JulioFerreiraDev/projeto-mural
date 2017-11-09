@@ -37,21 +37,22 @@ id_1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I
 > postar-evento joao "Bailão dos Jeca" 09/11/2017 22:00 "Green Club"
 ok
 > listar-posts bloco2
-id_2 evento joao "Bailão dos Jeca" 09/11/2017 22:00 "Green Club"
+id_3 evento joao "Bailão dos Jeca" 09/11/2017 22:00 "Green Club"
+id_2 anuncio joao "Vendo livro de álgebra"
 id_1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I - UFPR"
-> confirmar-presenca maria 2
+> confirmar-presenca maria 3
 ok
-> confirmar-presenca joao 2
+> confirmar-presenca joao 3
 ok
-> listar-participantes-evento 2
+> listar-participantes-evento 3
 joao
 maria
 > listar-eventos-confirmados maria
 id_1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I - UFPR"
-id_2 evento joao "Bailão dos Jeca" 09/11/2017 22:00 "Green Club"
-> desconfirmar-presenca maria 2
+id_3 evento joao "Bailão dos Jeca" 09/11/2017 22:00 "Green Club"
+> desconfirmar-presenca maria 3
 ok
-> desconfirmar-presenca jose 2
+> desconfirmar-presenca jose 3
 nao-tinha-confirmado
 > listar-eventos-confirmados maria
 id_1 evento joao "Encontro dos Estudantes de Palotina" 08/11/2017 17:00 "Bloco I - UFPR"

@@ -12,9 +12,7 @@ ok
 ok
 > criar-usuario ab
 nome-invalido
-> criar-usuario mariaDoCarmoDaSilvaSantos
-nome-invalido
-> criar-usuario paulo23
-nome-invalido
+> criar-usuario
+comando-invalido
 > criar-usuario joao
 usuario-ja-existe

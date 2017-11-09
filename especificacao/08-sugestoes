@@ -23,7 +23,7 @@ id1 anuncio joao "Vende-se Livro de Algebra"
 ok
 > listar-sugestoes jose
 maria: id1 anuncio joao "Vende-se Livro de Algebra"
-> listar-sugeridas maria
+> listar-sugeridos maria
 jose: id1 anuncio joao "Vende-se Livro de Algebra"
 > listar-sugestoes-post 1
 maria jose
