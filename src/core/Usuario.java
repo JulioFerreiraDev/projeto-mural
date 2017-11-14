@@ -1,29 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package core;
 
-/**
- *
- * @author Lenovo
- */
-public class Usuario {
-    
-    private String userName;
-    private String name;
+import java.util.List;
 
-    public Usuario(String userName) {
-        this.userName = userName;
-    }
+public class Usuario
+{
+	private List<Sugestao> sugeridos;
+	private List<Evento> eventosConfirmados;
+	private List<Lembrete> lembretes;
+	private List<Post> postsSalvos;
 
-    public String getUserName() {
-        return userName;
-    }
-    
-    
-    
-    
-    
+	public Usuario(){
+		
+	}
+	public void lembrar(Lembrete lembrete, int n){
+
+	}
+
+	public void listarSalvos(){
+
+	}
+	
+	public void listarEventosConfirmados(){
+
+	}
 }
