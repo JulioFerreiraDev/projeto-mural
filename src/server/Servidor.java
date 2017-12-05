@@ -1,5 +1,6 @@
 package server;
 
+import core.Mural;
 import core.Usuario;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -107,7 +108,10 @@ public class Servidor {
             
             
         } else if (command_type.equals(Command.CREATE_MURAL.toString())){
-            // TODO
+        	String muralName = command.split(" ")[1];
+            Mural mural = new Mural(muralName);
+        }else if (command_type.equals(Command.POST_ANUNCIO.toString())){
+        	
         }
         //TODO...
         

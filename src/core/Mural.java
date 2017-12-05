@@ -11,9 +11,8 @@ public class Mural
 
 	
 	
-	public Mural(String nome, String descricao) {
+	public Mural(String nome) {
 		this.nome = nome;
-		this.descricao = descricao;
 		this.posts = new ArrayList<>();
 	}
 

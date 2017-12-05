@@ -11,9 +11,8 @@ public class Usuario
 	private List<Lembrete> lembretes;
 	private List<Post> postsSalvos;
 
-	public Usuario(String nome, String email){
+	public Usuario(String nome){
 		this.nome = nome;
-		this.email = email;
 	}
 	
 	
@@ -68,6 +67,13 @@ public class Usuario
 
 	public void lembrar(Lembrete lembrete, int n){
 		//TODO
+	}
+
+
+
+	public String getUserName() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

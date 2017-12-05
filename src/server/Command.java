@@ -14,6 +14,7 @@ public enum Command {
     CREATE_MURAL("criar-mural"),
     
     POST_MESSAGE("postar-mensagem"),
+    POST_ANUNCIO("postar-anuncio"),
     LIST_USER_MESSAGES("listar-mensagens-usuario"),
     
     FOLLOW("seguir"),
